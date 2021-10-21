@@ -8,6 +8,11 @@ app.get('/', function(req, res){
 
 })
 
+app.get('/css', (req, res) => {
+    res.sendFile(path.join(__dirname, '../index.css'))
+  })
+
+  
 const port = process.env.PORT || 4444
 
 app.listen(port, () => console.log(`Take us to warp ${port}`))
